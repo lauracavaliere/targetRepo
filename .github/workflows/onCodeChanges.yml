@@ -1,0 +1,14 @@
+name: onCodeChanges
+
+on: 
+    repository_dispatch:
+        types: [repository_trigger]
+
+jobs:
+
+    check_files:
+      runs-on: [ubuntu-latest]
+      steps: 
+      - name: test
+        id: test
+        run: echo "hello"
